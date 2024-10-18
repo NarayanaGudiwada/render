@@ -19,6 +19,7 @@ fs.readFile(configPath, 'utf8', (err, data) => {
 
 // Redirect based on key
 app.get('/:key', (req, res) => {
+    console.log('Redirecting:', req.params.key);
     const key = req.params.key;
     const url = config[key];
 
